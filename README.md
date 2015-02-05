@@ -2,6 +2,7 @@ NEMB Template Project
 =====================
 
 This is a project template for a Node.js web application.
+*Please note that this project is not yet finished. This message will no longer appear when the project is ready for development and production use.*
 
 Tech List
 ---------
