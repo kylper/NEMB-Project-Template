@@ -5,12 +5,13 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    errorHandler = require('./routes/errorhandler')
     /* mongoose = require('mongoose'), */
 
-    app = express();
+    routes = require('./routes/'),
+    pageHandler = require('./routes/index'),
+    errorHandler = require('./routes/errorhandler'),
 
-var routes = require('./routes/index.js');
+    app = express();
 
 // app.set('port', process.env.PORT || 3000);
 
@@ -26,7 +27,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/*', routes);
+// Routes
+app.get('/', pageHandler);
+app.get('*', pageHandler);
 
 app.use(errorHandler);
 
