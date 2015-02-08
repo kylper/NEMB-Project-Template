@@ -18,6 +18,8 @@ This is a project template for a Node.js web application.
 
 This is everything you need to get started working on a cool Node.js web app! Everything from the project config files to the folder structure is entirely handled for you!
 
+Just note, when going into production with a project based on this template, you should probably remove the "README.md" from every sub-directory.
+
 ## Building with Gulp
 
 Just running `` gulp `` will run all of the scripts below.
